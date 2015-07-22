@@ -2,7 +2,7 @@
 #include <mc9s12dp256.h>     /* registers & ports definitions */
 
 /*****************************
-*
+*      Time wasters
 ******************************/
 void delayms(unsigned int n){ // delay loop 
     unsigned long delay;    // Long is better than int because int fills up faster                
@@ -16,7 +16,7 @@ void delayus(unsigned int n)
      while(delay--);
   }
 /*****************************
-*
+*	LCD Control and Data
 ******************************/
 void LCDcmd(char c) { //send cmd byte c to LCD control reg
   char lownib = (0x0f & c) <<2; //shift into bits 2:5)
